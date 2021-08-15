@@ -20,14 +20,14 @@ import javax.persistence.FetchType;
 public class Persona {
 
 	@Id 
-	@Column(name="Id")
+	@Column(name="idPersona")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idPersona;
 	private String nombre;
 	private String apellido;
 	
 	@ManyToOne(fetch =FetchType.LAZY)
-	@JoinColumn(name="IDSEXASO")
+	@JoinColumn(name="idSexo")
 	private Sexo sexo;
 	
 	public  Persona() {

@@ -14,12 +14,12 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Sexo {
 	
 	@Id 
-	@Column(name="Id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="idSexo")
 	private int idSexo;
 	
 	@Column(name="descripcion")
-	private String Descripcion;
+	private String descripcion;
 
 	public Sexo(){
 			
@@ -34,11 +34,11 @@ public class Sexo {
 	}
 
 	public String getDescripcion() {
-		return Descripcion;
+		return descripcion;
 	}
 
 	public void setDescripcion(String descripcion) {
-		Descripcion = descripcion;
+		this.descripcion = descripcion;
 	}
 	
 	
